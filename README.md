@@ -1,20 +1,7 @@
-# Lab 05 — Django ORM & Models: Simple LMS
 
 ## Cara Setup
 
-### 1. Copy file ke project kamu
-Salin semua file dari folder ini ke project `simple_lms` kamu:
-
-```
-requirements.txt            → simple_lms/requirements.txt
-code/courses/models.py      → simple_lms/code/courses/models.py
-code/courses/admin.py       → simple_lms/code/courses/admin.py
-code/courses/migrations/0002_add_fields_and_models.py → simple_lms/code/courses/migrations/
-code/courses/management/commands/query_demo.py        → simple_lms/code/courses/management/commands/
-code/fixtures/initial_data.json → simple_lms/code/fixtures/initial_data.json
-```
-
-### 2. Rebuild Docker image
+### 1. Rebuild Docker image
 
 ```bash
 docker-compose down
@@ -22,7 +9,7 @@ docker-compose build --no-cache
 docker-compose up -d
 ```
 
-### 3. Jalankan migrations
+### 2. Jalankan migrations
 
 ```bash
 # Migration dari starter (0001)
@@ -32,31 +19,31 @@ docker-compose exec app python manage.py migrate
 docker-compose exec app python manage.py migrate courses
 ```
 
-### 4. Load fixtures (data awal)
+### 3. Load fixtures (data awal)
 
 ```bash
 docker-compose exec app python manage.py loaddata fixtures/initial_data.json
 ```
 
-### 5. Buat superuser untuk Django Admin
+### 4. Buat superuser untuk Django Admin
 
 ```bash
 docker-compose exec app python manage.py createsuperuser
 ```
 
-### 6. Seed data dummy (dari starter)
+### 5. Seed data dummy (dari starter)
 
 ```bash
 docker-compose exec app python manage.py seed_data
 ```
 
-### 7. Jalankan Query Optimization Demo
+### 6. Jalankan Query Optimization Demo
 
 ```bash
 docker-compose exec app python manage.py query_demo
 ```
 
-### 8. Akses aplikasi
+### 7. Akses aplikasi
 
 | URL | Keterangan |
 |-----|-----------|
