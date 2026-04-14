@@ -1,0 +1,231 @@
+[
+  {
+    "model": "courses.category",
+    "pk": 1,
+    "fields": {
+      "name": "Ilmu Komputer",
+      "description": "Mata kuliah di bidang ilmu komputer dan teknologi informasi",
+      "parent": null,
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.category",
+    "pk": 2,
+    "fields": {
+      "name": "Pemrograman",
+      "description": "Mata kuliah pemrograman berbagai bahasa dan paradigma",
+      "parent": 1,
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.category",
+    "pk": 3,
+    "fields": {
+      "name": "Basis Data",
+      "description": "Mata kuliah manajemen dan optimasi basis data",
+      "parent": 1,
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.category",
+    "pk": 4,
+    "fields": {
+      "name": "Jaringan & Keamanan",
+      "description": "Mata kuliah jaringan komputer dan keamanan siber",
+      "parent": 1,
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.category",
+    "pk": 5,
+    "fields": {
+      "name": "Pemrograman Web",
+      "description": "Frontend dan backend web development",
+      "parent": 2,
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.category",
+    "pk": 6,
+    "fields": {
+      "name": "Pemrograman Mobile",
+      "description": "Android, iOS, dan cross-platform development",
+      "parent": 2,
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "username": "admin",
+      "email": "admin@lms.ac.id",
+      "first_name": "Admin",
+      "last_name": "LMS",
+      "is_staff": true,
+      "is_superuser": true,
+      "is_active": true,
+      "password": "pbkdf2_sha256$720000$placeholder$placeholder="
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "username": "dosen01",
+      "email": "dosen01@lms.ac.id",
+      "first_name": "Budi",
+      "last_name": "Santoso",
+      "is_staff": false,
+      "is_superuser": false,
+      "is_active": true,
+      "password": "pbkdf2_sha256$720000$placeholder$placeholder="
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "username": "mhs001",
+      "email": "mhs001@student.lms.ac.id",
+      "first_name": "Siti",
+      "last_name": "Rahayu",
+      "is_staff": false,
+      "is_superuser": false,
+      "is_active": true,
+      "password": "pbkdf2_sha256$720000$placeholder$placeholder="
+    }
+  },
+  {
+    "model": "courses.userprofile",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "role": "admin",
+      "bio": "Administrator sistem LMS",
+      "avatar": null,
+      "joined_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.userprofile",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "role": "instructor",
+      "bio": "Dosen Pemrograman Web dan Basis Data",
+      "avatar": null,
+      "joined_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.userprofile",
+    "pk": 3,
+    "fields": {
+      "user": 3,
+      "role": "student",
+      "bio": "",
+      "avatar": null,
+      "joined_at": "2025-01-15T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 1,
+    "fields": {
+      "name": "Pemrograman Web dengan Django",
+      "description": "Belajar membangun aplikasi web modern menggunakan framework Django. Mulai dari setup project, ORM, hingga deployment.",
+      "price": 150000,
+      "image": null,
+      "teacher": 2,
+      "category": 5,
+      "created_at": "2025-01-10T00:00:00Z",
+      "updated_at": "2025-01-10T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 2,
+    "fields": {
+      "name": "Basis Data Lanjut",
+      "description": "Optimasi query, indexing, dan manajemen database PostgreSQL untuk aplikasi skala besar.",
+      "price": 125000,
+      "image": null,
+      "teacher": 2,
+      "category": 3,
+      "created_at": "2025-01-12T00:00:00Z",
+      "updated_at": "2025-01-12T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.coursecontent",
+    "pk": 1,
+    "fields": {
+      "name": "Pengantar Django Framework",
+      "description": "Sejarah, arsitektur MVT, dan keunggulan Django dibanding framework lain",
+      "video_url": null,
+      "file_attachment": null,
+      "course_id": 1,
+      "parent_id": null,
+      "order": 1,
+      "created_at": "2025-01-10T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.coursecontent",
+    "pk": 2,
+    "fields": {
+      "name": "Setup Project Django",
+      "description": "Instalasi, virtual environment, membuat project dan app pertama",
+      "video_url": null,
+      "file_attachment": null,
+      "course_id": 1,
+      "parent_id": null,
+      "order": 2,
+      "created_at": "2025-01-10T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.coursecontent",
+    "pk": 3,
+    "fields": {
+      "name": "Django ORM dan Models",
+      "description": "Membuat models, relasi, dan query menggunakan Django ORM",
+      "video_url": null,
+      "file_attachment": null,
+      "course_id": 1,
+      "parent_id": null,
+      "order": 3,
+      "created_at": "2025-01-10T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.coursecontent",
+    "pk": 4,
+    "fields": {
+      "name": "Pengantar Basis Data",
+      "description": "Konsep dasar RDBMS, SQL, dan PostgreSQL",
+      "video_url": null,
+      "file_attachment": null,
+      "course_id": 2,
+      "parent_id": null,
+      "order": 1,
+      "created_at": "2025-01-12T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.coursemember",
+    "pk": 1,
+    "fields": {
+      "course_id": 1,
+      "user_id": 3,
+      "roles": "std",
+      "enrolled_at": "2025-01-16T00:00:00Z"
+    }
+  }
+]
